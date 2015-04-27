@@ -1,0 +1,546 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8C15BF971ACA490B00337829 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C15BF961ACA490B00337829 /* main.m */; };
+		8C15BF9A1ACA490B00337829 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C15BF991ACA490B00337829 /* AppDelegate.m */; };
+		8C15BF9D1ACA490B00337829 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C15BF9C1ACA490B00337829 /* ViewController.m */; };
+		8C15BFA01ACA490B00337829 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C15BF9E1ACA490B00337829 /* Main.storyboard */; };
+		8C15BFA21ACA490B00337829 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C15BFA11ACA490B00337829 /* Images.xcassets */; };
+		8C15BFA51ACA490B00337829 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C15BFA31ACA490B00337829 /* LaunchScreen.xib */; };
+		8C15BFB11ACA490B00337829 /* picdoodleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C15BFB01ACA490B00337829 /* picdoodleTests.m */; };
+		8C15BFBD1AD4B82100337829 /* JSImagePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C15BFBC1AD4B82100337829 /* JSImagePickerViewController.m */; };
+		8C15BFBF1AD6125A00337829 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C15BFBE1AD6125A00337829 /* CoreGraphics.framework */; };
+		8C15BFC11AD6126E00337829 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C15BFC01AD6126E00337829 /* UIKit.framework */; };
+		8C15BFC31AD6130300337829 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C15BFC21AD6130300337829 /* Foundation.framework */; };
+		8C4442BF1ADE0A490022B89D /* PicDoodleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C4442BD1ADE0A490022B89D /* PicDoodleViewController.m */; };
+		8C4442C01ADE0A490022B89D /* PicDoodleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C4442BE1ADE0A490022B89D /* PicDoodleViewController.xib */; };
+		8C779BFC1ADF2F1700FA9171 /* PicChooseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C779BFA1ADF2F1700FA9171 /* PicChooseViewController.m */; };
+		8C779BFD1ADF2F1700FA9171 /* PicChooseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C779BFB1ADF2F1700FA9171 /* PicChooseViewController.xib */; };
+		8C779C011ADF819300FA9171 /* PicReloadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C779BFF1ADF819300FA9171 /* PicReloadViewController.m */; };
+		8C779C021ADF819300FA9171 /* PicReloadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C779C001ADF819300FA9171 /* PicReloadViewController.xib */; };
+		8C779C061ADF84C700FA9171 /* PicToolsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C779C041ADF84C700FA9171 /* PicToolsViewController.m */; };
+		8C779C071ADF84C700FA9171 /* PicToolsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C779C051ADF84C700FA9171 /* PicToolsViewController.xib */; };
+		8C779C0B1ADF856B00FA9171 /* PicPostingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C779C091ADF856B00FA9171 /* PicPostingViewController.m */; };
+		8C779C0C1ADF856B00FA9171 /* PicPostingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C779C0A1ADF856B00FA9171 /* PicPostingViewController.xib */; };
+		8CFCC0281AE146D3006FCBAF /* DNISActionSheetBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CFCC0271AE146D3006FCBAF /* DNISActionSheetBlocks.m */; };
+		8CFCC02A1AE2B07F006FCBAF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CFCC0291AE2B07F006FCBAF /* QuartzCore.framework */; };
+		8CFCC02D1AE37D04006FCBAF /* PicToolsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CFCC02C1AE37D04006FCBAF /* PicToolsManager.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8C15BFAB1ACA490B00337829 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8C15BF891ACA490B00337829 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8C15BF901ACA490B00337829;
+			remoteInfo = picdoodle;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8C15BF911ACA490B00337829 /* picdoodle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = picdoodle.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C15BF951ACA490B00337829 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C15BF961ACA490B00337829 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8C15BF981ACA490B00337829 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8C15BF991ACA490B00337829 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8C15BF9B1ACA490B00337829 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		8C15BF9C1ACA490B00337829 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8C15BF9F1ACA490B00337829 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8C15BFA11ACA490B00337829 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		8C15BFA41ACA490B00337829 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		8C15BFAA1ACA490B00337829 /* PicDoodle.temp_caseinsensitive_renameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PicDoodle.temp_caseinsensitive_renameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C15BFAF1ACA490B00337829 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C15BFB01ACA490B00337829 /* picdoodleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = picdoodleTests.m; sourceTree = "<group>"; };
+		8C15BFBB1AD4B82100337829 /* JSImagePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSImagePickerViewController.h; sourceTree = "<group>"; };
+		8C15BFBC1AD4B82100337829 /* JSImagePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSImagePickerViewController.m; sourceTree = "<group>"; };
+		8C15BFBE1AD6125A00337829 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		8C15BFC01AD6126E00337829 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		8C15BFC21AD6130300337829 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8C4442BC1ADE0A490022B89D /* PicDoodleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicDoodleViewController.h; sourceTree = "<group>"; };
+		8C4442BD1ADE0A490022B89D /* PicDoodleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicDoodleViewController.m; sourceTree = "<group>"; };
+		8C4442BE1ADE0A490022B89D /* PicDoodleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PicDoodleViewController.xib; sourceTree = "<group>"; };
+		8C779BF91ADF2F1700FA9171 /* PicChooseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicChooseViewController.h; sourceTree = "<group>"; };
+		8C779BFA1ADF2F1700FA9171 /* PicChooseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicChooseViewController.m; sourceTree = "<group>"; };
+		8C779BFB1ADF2F1700FA9171 /* PicChooseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PicChooseViewController.xib; sourceTree = "<group>"; };
+		8C779BFE1ADF819300FA9171 /* PicReloadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicReloadViewController.h; sourceTree = "<group>"; };
+		8C779BFF1ADF819300FA9171 /* PicReloadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicReloadViewController.m; sourceTree = "<group>"; };
+		8C779C001ADF819300FA9171 /* PicReloadViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PicReloadViewController.xib; sourceTree = "<group>"; };
+		8C779C031ADF84C700FA9171 /* PicToolsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicToolsViewController.h; sourceTree = "<group>"; };
+		8C779C041ADF84C700FA9171 /* PicToolsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicToolsViewController.m; sourceTree = "<group>"; };
+		8C779C051ADF84C700FA9171 /* PicToolsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PicToolsViewController.xib; sourceTree = "<group>"; };
+		8C779C081ADF856B00FA9171 /* PicPostingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicPostingViewController.h; sourceTree = "<group>"; };
+		8C779C091ADF856B00FA9171 /* PicPostingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicPostingViewController.m; sourceTree = "<group>"; };
+		8C779C0A1ADF856B00FA9171 /* PicPostingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PicPostingViewController.xib; sourceTree = "<group>"; };
+		8CFCC0261AE146D3006FCBAF /* DNISActionSheetBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNISActionSheetBlocks.h; sourceTree = "<group>"; };
+		8CFCC0271AE146D3006FCBAF /* DNISActionSheetBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNISActionSheetBlocks.m; sourceTree = "<group>"; };
+		8CFCC0291AE2B07F006FCBAF /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		8CFCC02B1AE37D04006FCBAF /* PicToolsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicToolsManager.h; sourceTree = "<group>"; };
+		8CFCC02C1AE37D04006FCBAF /* PicToolsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicToolsManager.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8C15BF8E1ACA490B00337829 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CFCC02A1AE2B07F006FCBAF /* QuartzCore.framework in Frameworks */,
+				8C15BFC31AD6130300337829 /* Foundation.framework in Frameworks */,
+				8C15BFC11AD6126E00337829 /* UIKit.framework in Frameworks */,
+				8C15BFBF1AD6125A00337829 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C15BFA71ACA490B00337829 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8C15BF881ACA490B00337829 = {
+			isa = PBXGroup;
+			children = (
+				8CFCC0291AE2B07F006FCBAF /* QuartzCore.framework */,
+				8C15BFC21AD6130300337829 /* Foundation.framework */,
+				8C15BFC01AD6126E00337829 /* UIKit.framework */,
+				8C15BFBE1AD6125A00337829 /* CoreGraphics.framework */,
+				8C15BF931ACA490B00337829 /* picdoodle */,
+				8C15BF921ACA490B00337829 /* Products */,
+				8C15BFAD1ACA490B00337829 /* picdoodleTests */,
+			);
+			sourceTree = "<group>";
+		};
+		8C15BF921ACA490B00337829 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8C15BF911ACA490B00337829 /* picdoodle.app */,
+				8C15BFAA1ACA490B00337829 /* PicDoodle.temp_caseinsensitive_renameTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8C15BF931ACA490B00337829 /* picdoodle */ = {
+			isa = PBXGroup;
+			children = (
+				8CFCC02F1AE49F5A006FCBAF /* XIB Files */,
+				8CFCC02E1AE49F38006FCBAF /* DNISActionSheet */,
+				8C15BFBA1AD4B80F00337829 /* ImagePicker */,
+				8C15BF981ACA490B00337829 /* AppDelegate.h */,
+				8C15BF991ACA490B00337829 /* AppDelegate.m */,
+				8C779C081ADF856B00FA9171 /* PicPostingViewController.h */,
+				8C779C091ADF856B00FA9171 /* PicPostingViewController.m */,
+				8C779BF91ADF2F1700FA9171 /* PicChooseViewController.h */,
+				8C779BFA1ADF2F1700FA9171 /* PicChooseViewController.m */,
+				8C4442BC1ADE0A490022B89D /* PicDoodleViewController.h */,
+				8C4442BD1ADE0A490022B89D /* PicDoodleViewController.m */,
+				8C779C031ADF84C700FA9171 /* PicToolsViewController.h */,
+				8C779C041ADF84C700FA9171 /* PicToolsViewController.m */,
+				8CFCC02B1AE37D04006FCBAF /* PicToolsManager.h */,
+				8CFCC02C1AE37D04006FCBAF /* PicToolsManager.m */,
+				8C779BFE1ADF819300FA9171 /* PicReloadViewController.h */,
+				8C779BFF1ADF819300FA9171 /* PicReloadViewController.m */,
+				8C15BF9B1ACA490B00337829 /* ViewController.h */,
+				8C15BF9C1ACA490B00337829 /* ViewController.m */,
+				8C15BFA11ACA490B00337829 /* Images.xcassets */,
+				8C15BF941ACA490B00337829 /* Supporting Files */,
+			);
+			path = picdoodle;
+			sourceTree = "<group>";
+		};
+		8C15BF941ACA490B00337829 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8C15BF951ACA490B00337829 /* Info.plist */,
+				8C15BF961ACA490B00337829 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8C15BFAD1ACA490B00337829 /* picdoodleTests */ = {
+			isa = PBXGroup;
+			children = (
+				8C15BFB01ACA490B00337829 /* picdoodleTests.m */,
+				8C15BFAE1ACA490B00337829 /* Supporting Files */,
+			);
+			path = picdoodleTests;
+			sourceTree = "<group>";
+		};
+		8C15BFAE1ACA490B00337829 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8C15BFAF1ACA490B00337829 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8C15BFBA1AD4B80F00337829 /* ImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				8C15BFBB1AD4B82100337829 /* JSImagePickerViewController.h */,
+				8C15BFBC1AD4B82100337829 /* JSImagePickerViewController.m */,
+			);
+			name = ImagePicker;
+			sourceTree = "<group>";
+		};
+		8CFCC02E1AE49F38006FCBAF /* DNISActionSheet */ = {
+			isa = PBXGroup;
+			children = (
+				8CFCC0261AE146D3006FCBAF /* DNISActionSheetBlocks.h */,
+				8CFCC0271AE146D3006FCBAF /* DNISActionSheetBlocks.m */,
+			);
+			name = DNISActionSheet;
+			sourceTree = "<group>";
+		};
+		8CFCC02F1AE49F5A006FCBAF /* XIB Files */ = {
+			isa = PBXGroup;
+			children = (
+				8C15BFA31ACA490B00337829 /* LaunchScreen.xib */,
+				8C15BF9E1ACA490B00337829 /* Main.storyboard */,
+				8C4442BE1ADE0A490022B89D /* PicDoodleViewController.xib */,
+				8C779C001ADF819300FA9171 /* PicReloadViewController.xib */,
+				8C779C051ADF84C700FA9171 /* PicToolsViewController.xib */,
+				8C779BFB1ADF2F1700FA9171 /* PicChooseViewController.xib */,
+				8C779C0A1ADF856B00FA9171 /* PicPostingViewController.xib */,
+			);
+			name = "XIB Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8C15BF901ACA490B00337829 /* PicDoodle.temp_caseinsensitive_rename */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C15BFB41ACA490B00337829 /* Build configuration list for PBXNativeTarget "PicDoodle.temp_caseinsensitive_rename" */;
+			buildPhases = (
+				8C15BF8D1ACA490B00337829 /* Sources */,
+				8C15BF8E1ACA490B00337829 /* Frameworks */,
+				8C15BF8F1ACA490B00337829 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PicDoodle.temp_caseinsensitive_rename;
+			productName = picdoodle;
+			productReference = 8C15BF911ACA490B00337829 /* picdoodle.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8C15BFA91ACA490B00337829 /* PicDoodle.temp_caseinsensitive_renameTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C15BFB71ACA490B00337829 /* Build configuration list for PBXNativeTarget "PicDoodle.temp_caseinsensitive_renameTests" */;
+			buildPhases = (
+				8C15BFA61ACA490B00337829 /* Sources */,
+				8C15BFA71ACA490B00337829 /* Frameworks */,
+				8C15BFA81ACA490B00337829 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8C15BFAC1ACA490B00337829 /* PBXTargetDependency */,
+			);
+			name = PicDoodle.temp_caseinsensitive_renameTests;
+			productName = picdoodleTests;
+			productReference = 8C15BFAA1ACA490B00337829 /* PicDoodle.temp_caseinsensitive_renameTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8C15BF891ACA490B00337829 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = dniswhite;
+				TargetAttributes = {
+					8C15BF901ACA490B00337829 = {
+						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = YXQT74E3T7;
+					};
+					8C15BFA91ACA490B00337829 = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = 8C15BF901ACA490B00337829;
+					};
+				};
+			};
+			buildConfigurationList = 8C15BF8C1ACA490B00337829 /* Build configuration list for PBXProject "PicDoodle" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8C15BF881ACA490B00337829;
+			productRefGroup = 8C15BF921ACA490B00337829 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8C15BF901ACA490B00337829 /* PicDoodle.temp_caseinsensitive_rename */,
+				8C15BFA91ACA490B00337829 /* PicDoodle.temp_caseinsensitive_renameTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8C15BF8F1ACA490B00337829 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C779BFD1ADF2F1700FA9171 /* PicChooseViewController.xib in Resources */,
+				8C15BFA01ACA490B00337829 /* Main.storyboard in Resources */,
+				8C15BFA51ACA490B00337829 /* LaunchScreen.xib in Resources */,
+				8C4442C01ADE0A490022B89D /* PicDoodleViewController.xib in Resources */,
+				8C779C0C1ADF856B00FA9171 /* PicPostingViewController.xib in Resources */,
+				8C779C021ADF819300FA9171 /* PicReloadViewController.xib in Resources */,
+				8C779C071ADF84C700FA9171 /* PicToolsViewController.xib in Resources */,
+				8C15BFA21ACA490B00337829 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C15BFA81ACA490B00337829 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8C15BF8D1ACA490B00337829 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C15BF9D1ACA490B00337829 /* ViewController.m in Sources */,
+				8C779C0B1ADF856B00FA9171 /* PicPostingViewController.m in Sources */,
+				8C4442BF1ADE0A490022B89D /* PicDoodleViewController.m in Sources */,
+				8C779BFC1ADF2F1700FA9171 /* PicChooseViewController.m in Sources */,
+				8C779C011ADF819300FA9171 /* PicReloadViewController.m in Sources */,
+				8CFCC02D1AE37D04006FCBAF /* PicToolsManager.m in Sources */,
+				8CFCC0281AE146D3006FCBAF /* DNISActionSheetBlocks.m in Sources */,
+				8C15BFBD1AD4B82100337829 /* JSImagePickerViewController.m in Sources */,
+				8C15BF9A1ACA490B00337829 /* AppDelegate.m in Sources */,
+				8C15BF971ACA490B00337829 /* main.m in Sources */,
+				8C779C061ADF84C700FA9171 /* PicToolsViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C15BFA61ACA490B00337829 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C15BFB11ACA490B00337829 /* picdoodleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8C15BFAC1ACA490B00337829 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8C15BF901ACA490B00337829 /* PicDoodle.temp_caseinsensitive_rename */;
+			targetProxy = 8C15BFAB1ACA490B00337829 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8C15BF9E1ACA490B00337829 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8C15BF9F1ACA490B00337829 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8C15BFA31ACA490B00337829 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8C15BFA41ACA490B00337829 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8C15BFB21ACA490B00337829 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		8C15BFB31ACA490B00337829 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8C15BFB51ACA490B00337829 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = picdoodle/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = picdoodle;
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		8C15BFB61ACA490B00337829 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = picdoodle/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = picdoodle;
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		8C15BFB81ACA490B00337829 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = picdoodleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = PicDoodle.temp_caseinsensitive_renameTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/picdoodle.app/picdoodle";
+			};
+			name = Debug;
+		};
+		8C15BFB91ACA490B00337829 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = picdoodleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = PicDoodle.temp_caseinsensitive_renameTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/picdoodle.app/picdoodle";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8C15BF8C1ACA490B00337829 /* Build configuration list for PBXProject "PicDoodle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C15BFB21ACA490B00337829 /* Debug */,
+				8C15BFB31ACA490B00337829 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8C15BFB41ACA490B00337829 /* Build configuration list for PBXNativeTarget "PicDoodle.temp_caseinsensitive_rename" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C15BFB51ACA490B00337829 /* Debug */,
+				8C15BFB61ACA490B00337829 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8C15BFB71ACA490B00337829 /* Build configuration list for PBXNativeTarget "PicDoodle.temp_caseinsensitive_renameTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C15BFB81ACA490B00337829 /* Debug */,
+				8C15BFB91ACA490B00337829 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8C15BF891ACA490B00337829 /* Project object */;
+}
