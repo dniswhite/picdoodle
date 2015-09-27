@@ -20,13 +20,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="colormap" translatesAutoresizingMaskIntoConstraints="NO" id="Ntc-aT-Z7Z">
-                    <rect key="frame" x="8" y="61" width="584" height="281"/>
+                    <rect key="frame" x="8" y="61" width="584" height="164"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="281" id="RCt-wg-iMJ"/>
+                        <constraint firstAttribute="height" constant="164" id="RCt-wg-iMJ"/>
                     </constraints>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="He1-tR-h2w">
-                    <rect key="frame" x="476" y="350" width="116" height="116"/>
+                    <rect key="frame" x="476" y="243" width="116" height="116"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="116" id="b7h-cX-PR7"/>
                         <constraint firstAttribute="width" constant="116" id="iNp-4W-oQ3"/>
@@ -35,31 +35,31 @@
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a Color" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C8j-lA-H6x">
                     <rect key="frame" x="8" y="32" width="109" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="10" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="VMi-j3-33f">
-                    <rect key="frame" x="124" y="350" width="346" height="31"/>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="5" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="VMi-j3-33f">
+                    <rect key="frame" x="124" y="243" width="346" height="31"/>
                     <connections>
                         <action selector="sliderChanged:" destination="-1" eventType="valueChanged" id="KEV-y4-Ou1"/>
                     </connections>
                 </slider>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brush Width" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U8d-Cz-TFT">
-                    <rect key="frame" x="8" y="359" width="95" height="21"/>
+                    <rect key="frame" x="8" y="252" width="95" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="255" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="FwX-J1-SKP">
-                    <rect key="frame" x="124" y="436" width="346" height="31"/>
+                    <rect key="frame" x="124" y="329" width="346" height="31"/>
                     <connections>
                         <action selector="sliderChanged:" destination="-1" eventType="valueChanged" id="Udw-qO-rrV"/>
                     </connections>
                 </slider>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brush Opacity" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="esx-BQ-U01">
-                    <rect key="frame" x="8" y="445" width="110" height="21"/>
+                    <rect key="frame" x="8" y="338" width="110" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
@@ -80,7 +80,7 @@
                 <constraint firstItem="VMi-j3-33f" firstAttribute="top" secondItem="He1-tR-h2w" secondAttribute="top" id="n9i-uH-O6Z"/>
                 <constraint firstItem="FwX-J1-SKP" firstAttribute="leading" secondItem="esx-BQ-U01" secondAttribute="trailing" constant="8" id="rkI-1F-Pe9"/>
                 <constraint firstItem="Ntc-aT-Z7Z" firstAttribute="leading" secondItem="C8j-lA-H6x" secondAttribute="leading" id="w9D-6c-Df5"/>
-                <constraint firstItem="He1-tR-h2w" firstAttribute="top" secondItem="Ntc-aT-Z7Z" secondAttribute="bottom" constant="8" symbolic="YES" id="yRa-kV-aDZ"/>
+                <constraint firstItem="He1-tR-h2w" firstAttribute="top" secondItem="Ntc-aT-Z7Z" secondAttribute="bottom" constant="18" id="yRa-kV-aDZ"/>
                 <constraint firstItem="Ntc-aT-Z7Z" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailingMargin" id="zAZ-HS-BFR"/>
             </constraints>
         </view>

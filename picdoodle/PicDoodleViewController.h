@@ -19,5 +19,8 @@
 -(void) sharePicture;
 
 @property (strong, nonatomic) PicToolsManager *tools;
+@property (weak, nonatomic) IBOutlet UIButton *textTools;
+
+- (IBAction)textToolsClick:(id)sender;
 
 @end

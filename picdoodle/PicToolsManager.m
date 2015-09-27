@@ -24,7 +24,7 @@
     [self setRed: 0.0/255.0];
     [self setGreen: 0.0/255.0];
     [self setBlue: 0.0/255.0];
-    [self setBrush: 10.0];
+    [self setBrush: 5.0];
     [self setOpacity:1.0];
 }
 

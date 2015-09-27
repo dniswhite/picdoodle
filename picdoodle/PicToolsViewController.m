@@ -16,6 +16,8 @@
     CGFloat brush;
     CGFloat opacity;
     CGFloat alpha;
+    
+    UIImage * colorMap;
  }
 
 @end
@@ -44,6 +46,8 @@
     
     [self setupDefaultBush];
     [self updateBrushDisplay];
+    
+    colorMap = [self getColorMap];
 }
 
 - (void) setupDefaultBush {
@@ -65,7 +69,8 @@
     
     if (CGRectContainsPoint([[self imageColorMap] frame], currentLocation)) {
         // save color information
-        [self saveColorAtLocation:currentLocation];
+        [self saveColorAtLocation:[touch locationInView:[self imageColorMap]]];
+//        [self saveColorAtLocation:currentLocation];
         
         // update brush information
         [self updateBrushDisplay];
@@ -78,31 +83,66 @@
 
     if (CGRectContainsPoint([[self imageColorMap] frame], currentLocation)) {
         // save color information
-        [self saveColorAtLocation:currentLocation];
+        [self saveColorAtLocation:[touch locationInView:[self imageColorMap]]];
         
         // update brush information
         [self updateBrushDisplay];
     }
 }
 
--(void) saveColorAtLocation: (CGPoint) location {
-    unsigned char pixel[4] = {0};
+-(UIImage *) getColorMap {
+    CGImageRef imageRef = [[[self imageColorMap] image] CGImage];
+    CGBitmapInfo bitmapInfo = CGImageGetBitmapInfo(imageRef);
     
+    NSInteger width = [self imageColorMap].frame.size.width;
+    NSInteger height = [self imageColorMap].frame.size.height;
+    
+    CGContextRef bitmap = CGBitmapContextCreate(NULL, width, height, CGImageGetBitsPerComponent(imageRef), 4 * width,CGImageGetColorSpace(imageRef), bitmapInfo);
+    CGContextDrawImage(bitmap, CGRectMake(0, 0, width, height), imageRef);
+    CGImageRef ref = CGBitmapContextCreateImage(bitmap);
+    UIImage *result = [UIImage imageWithCGImage:ref];
+    
+    CGContextRelease(bitmap);
+    CGImageRelease(ref);
+    
+    return result;
+}
+
+-(void) saveColorAtLocation: (CGPoint) location {
     CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
     
-    CGContextRef contextRef = CGBitmapContextCreate(pixel, 1, 1, 8, 4, colorSpace, kCGBitmapAlphaInfoMask & kCGImageAlphaPremultipliedLast);
+    //CGImageRef cgImage = [[[self imageColorMap] image] CGImage];
+    CGImageRef cgImage = [colorMap CGImage];
     
-    CGContextTranslateCTM(contextRef, -location.x, -location.y);
+    NSUInteger width = CGImageGetWidth(cgImage);
+    NSUInteger height = CGImageGetHeight(cgImage);
+    
+    if (location.x < 0 || location.y < 0 || location.x > width || location.y > height) {
+        NSLog(@"what happened??");
+    }
+    
+    unsigned char *rawData = (unsigned char*) calloc(height * width * 4, sizeof(unsigned char));
+    NSUInteger bytesPerPixel = 4;
+    NSUInteger bytesPerRow = bytesPerPixel * width;
+    NSUInteger bitsPerComponent = 8;
+    
+    CGContextRef contextRef = CGBitmapContextCreate(rawData, width, height, bitsPerComponent, bytesPerRow, colorSpace, kCGBitmapAlphaInfoMask & kCGImageAlphaPremultipliedLast);
+    
+    CGContextDrawImage(contextRef, CGRectMake(0, 0, width, height), cgImage);
     
     [self.imageColorMap.layer renderInContext:contextRef];
     
     CGContextRelease(contextRef);
     CGColorSpaceRelease(colorSpace);
     
-    red = pixel[0]/255.0;
-    green = pixel[1]/255.0;
-    blue = pixel[2]/255.0;
-    alpha = pixel[3]/255.0;
+    NSUInteger byteIndex = (bytesPerRow * (NSUInteger)location.y) + (NSUInteger)location.x * bytesPerPixel;
+    
+    red = (rawData[byteIndex] * 1.0)/255.0;
+    green = (rawData[byteIndex + 1] * 1.0)/255.0;
+    blue = (rawData[byteIndex + 2] * 1.0)/255.0;
+    alpha = (rawData[byteIndex + 3] * 1.0)/255.0;
+    
+    free(rawData);
     
     NSLog(@"%f %f %f %f", alpha, red, green, blue);
 }

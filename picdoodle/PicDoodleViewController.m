@@ -9,10 +9,12 @@
 #import "PicDoodleViewController.h"
 #import "JSImagePickerViewController.h"
 #import "DNISActionSheetBlocks.h"
+#import "CLImageEditor.h"
 
-@interface PicDoodleViewController () <JSImagePickerViewControllerDelegate> {
+@interface PicDoodleViewController () <JSImagePickerViewControllerDelegate, CLImageEditorDelegate> {
     bool isLineDrawing;
     bool isDirty;
+    bool loadTools;
     
     CGPoint lastLocation;
     CGFloat red;
@@ -36,8 +38,17 @@
     [[[self imageView] layer] setMasksToBounds:YES];
     [[self imageView] setClipsToBounds:YES];
     
+//    [[self textTools] setImage:[self sizeImage:[UIImage imageNamed:@"filter"] scaledToSize:CGSizeMake(30.0f, 30.0f)] forState:UIControlStateNormal];
+//    [[self textTools] setTitle:@"Tools" forState:UIControlStateNormal];
+    [[self textTools] setBackgroundImage:[UIImage animatedImageNamed:@"btn_anim" duration:8.0] forState:UIControlStateNormal];
+    
+    [[[self textTools] layer] setBorderColor:[UIColor blackColor].CGColor];
+    [[[self textTools] layer] setBorderWidth:1.0f];
+    [[[self textTools] layer] setCornerRadius:5.0f];
+    
     originalImage = NULL;
     isDirty = NO;
+    loadTools = NO;
     
     [self setupDefaultBush];
 }
@@ -59,14 +70,44 @@
 
 - (void) imagePickerDidSelectImage:(UIImage *)image {
     image = [self fixImageRotation:image];
-    [[self imageView] setImage:image];
+    image = [self sizeImage:image];
     
+    originalImage = image;
+    loadTools = YES;
+}
+
+- (void)imagePickerDidClose {
+    if (loadTools ) {
+        CLImageEditor *editor = [[CLImageEditor alloc] initWithImage:originalImage];
+        editor.delegate = self;
+        
+        CLImageToolInfo *curveTool = [[editor toolInfo] subToolInfoWithToolName:@"CLToneCurveTool" recursive:NO];
+        curveTool.available = NO;
+        CLImageToolInfo *drawTool = [[editor toolInfo] subToolInfoWithToolName:@"CLDrawTool" recursive:NO];
+        drawTool.available = NO;
+        CLImageToolInfo *adjustTool = [[editor toolInfo] subToolInfoWithToolName:@"CLAdjustmentTool" recursive:NO];
+        adjustTool.available = NO;
+        CLImageToolInfo *rotateTool = [[editor toolInfo] subToolInfoWithToolName:@"CLRotateTool" recursive:NO];
+        rotateTool.available = NO;
+        
+        [[self tabBarController] presentViewController:editor animated:YES completion:nil];
+    }
+}
+
+#pragma mark- CLImageEditor delegate
+
+- (void)imageEditor:(CLImageEditor *)editor didFinishEdittingWithImage:(UIImage *)image
+{
+    [[self imageView] setImage:image];
+
     originalImage = image;
     
     [[self imageViewDrawing] setImage:NULL];
     [self transferImage];
 
     isDirty = NO;
+
+    [editor dismissViewControllerAnimated:YES completion:nil];
 }
 
 -(void) reloadPicture {
@@ -86,14 +127,37 @@
         [reloadSheet showInView: [self view]];
     }
 }
+-(UIImage *) sizeImage:(UIImage *)image {
+    CGImageRef imageRef = [image CGImage];
+    CGBitmapInfo bitmapInfo = CGImageGetBitmapInfo(imageRef);
+ 
+    NSInteger width = [self imageView].frame.size.width;
+    NSInteger height = [self imageView].frame.size.height;
+    
+    CGContextRef bitmap = CGBitmapContextCreate(NULL, width, height, CGImageGetBitsPerComponent(imageRef), 4 * width,CGImageGetColorSpace(imageRef), bitmapInfo);
+    CGContextDrawImage(bitmap, CGRectMake(0, 0, width, height), imageRef);
+    CGImageRef ref = CGBitmapContextCreateImage(bitmap);
+    UIImage *result = [UIImage imageWithCGImage:ref];
+    
+    CGContextRelease(bitmap);
+    CGImageRelease(ref);
+    
+    return result;
+}
+
+-(UIImage *) sizeImage:(UIImage *)image scaledToSize:(CGSize)newSize {
+    UIGraphicsBeginImageContextWithOptions(newSize, NO, 0.0);
+    [image drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return newImage;
+}
 
 -(void) sharePicture {
     NSString *textToShare = @"Check out this picdoodle that I created.";
     UIImage * image = [self getPicture];
     
-    NSArray *objectsToShare = @[textToShare, image];
-    
-    UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:objectsToShare applicationActivities:nil];
+    UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:@[image, textToShare] applicationActivities:nil];
     
     NSArray *excludeActivities = @[UIActivityTypePostToWeibo,
                                    UIActivityTypeAssignToContact,
@@ -109,6 +173,9 @@
 -(void) loadPicture {
     JSImagePickerViewController *imagePicker = [[JSImagePickerViewController alloc] init];
     imagePicker.delegate = self;
+    
+    loadTools = NO;
+    
     [imagePicker showImagePickerInController:self animated:YES];
 }
 
@@ -209,6 +276,8 @@
 -(void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
     
     if (YES == isLineDrawing) {
+        [[self textTools] setHidden:NO];
+
         UITouch *touch = [touches anyObject];
         CGPoint currentLocation = [touch locationInView:[self view]];
         
@@ -252,6 +321,8 @@
 
 -(void) touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
     isLineDrawing = YES;
+    
+    [[self textTools] setHidden:YES];
     
     UITouch *touch = [touches anyObject];
     CGPoint currentLocation = [touch locationInView:[self view]];
@@ -298,4 +369,19 @@
     return image;
 }
 
+- (IBAction)textToolsClick:(id)sender {
+    CLImageEditor *editor = [[CLImageEditor alloc] initWithImage:originalImage];
+    editor.delegate = self;
+    
+    CLImageToolInfo *curveTool = [[editor toolInfo] subToolInfoWithToolName:@"CLToneCurveTool" recursive:NO];
+    curveTool.available = NO;
+    CLImageToolInfo *drawTool = [[editor toolInfo] subToolInfoWithToolName:@"CLDrawTool" recursive:NO];
+    drawTool.available = NO;
+    CLImageToolInfo *adjustTool = [[editor toolInfo] subToolInfoWithToolName:@"CLAdjustmentTool" recursive:NO];
+    adjustTool.available = NO;
+    CLImageToolInfo *rotateTool = [[editor toolInfo] subToolInfoWithToolName:@"CLRotateTool" recursive:NO];
+    rotateTool.available = NO;
+    
+    [[self tabBarController] presentViewController:editor animated:YES completion:nil];
+}
 @end

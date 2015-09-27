@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PicDoodleViewController">
             <connections>
                 <outlet property="imageView" destination="zVo-JC-0P0" id="jg5-GR-c3e"/>
                 <outlet property="imageViewDrawing" destination="hlt-kb-7ri" id="jdF-aB-boZ"/>
+                <outlet property="textTools" destination="lAW-m5-xo3" id="AMK-rj-4WK"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -22,17 +24,33 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hlt-kb-7ri">
                     <rect key="frame" x="0.0" y="20" width="600" height="600"/>
                 </imageView>
+                <button opaque="NO" alpha="0.79999999999999982" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lAW-m5-xo3">
+                    <rect key="frame" x="557" y="30" width="35" height="35"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="35" id="Dl5-Op-UWy"/>
+                        <constraint firstAttribute="height" constant="35" id="vFX-iZ-WWx"/>
+                    </constraints>
+                    <state key="normal" title="Button">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="textToolsClick:" destination="-1" eventType="touchUpInside" id="Irb-Yf-zja"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="zVo-JC-0P0" firstAttribute="trailing" secondItem="hlt-kb-7ri" secondAttribute="trailing" id="RSm-aQ-Yr7"/>
-                <constraint firstItem="hlt-kb-7ri" firstAttribute="bottom" secondItem="zVo-JC-0P0" secondAttribute="bottom" id="ef4-5D-aYd"/>
-                <constraint firstItem="hlt-kb-7ri" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="erl-N7-MxF"/>
-                <constraint firstAttribute="trailing" secondItem="hlt-kb-7ri" secondAttribute="trailing" id="fF8-4Q-Agl"/>
-                <constraint firstAttribute="bottom" secondItem="hlt-kb-7ri" secondAttribute="bottom" constant="-20" id="g8c-o0-nb7"/>
-                <constraint firstItem="hlt-kb-7ri" firstAttribute="top" secondItem="zVo-JC-0P0" secondAttribute="top" id="kvY-Va-DvO"/>
-                <constraint firstItem="hlt-kb-7ri" firstAttribute="leading" secondItem="zVo-JC-0P0" secondAttribute="leading" id="sBu-er-MS1"/>
-                <constraint firstItem="zVo-JC-0P0" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="wFF-9b-4bt"/>
+                <constraint firstItem="hlt-kb-7ri" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="00Q-g6-zsx"/>
+                <constraint firstItem="lAW-m5-xo3" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="30" id="Lzr-R5-b3w"/>
+                <constraint firstItem="zVo-JC-0P0" firstAttribute="leading" secondItem="hlt-kb-7ri" secondAttribute="leading" id="SnZ-C0-3jn"/>
+                <constraint firstItem="hlt-kb-7ri" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="aZJ-XI-Ouw"/>
+                <constraint firstItem="lAW-m5-xo3" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailingMargin" id="cj0-8b-uCf"/>
+                <constraint firstItem="hlt-kb-7ri" firstAttribute="bottom" secondItem="zVo-JC-0P0" secondAttribute="bottom" id="iuk-jG-n7l"/>
+                <constraint firstAttribute="bottom" secondItem="hlt-kb-7ri" secondAttribute="bottom" constant="-20" id="kAg-V1-xgx"/>
+                <constraint firstItem="zVo-JC-0P0" firstAttribute="trailing" secondItem="hlt-kb-7ri" secondAttribute="trailing" id="mmp-ek-TtU"/>
+                <constraint firstAttribute="trailing" secondItem="zVo-JC-0P0" secondAttribute="trailing" id="xHK-vQ-nib"/>
+                <constraint firstItem="zVo-JC-0P0" firstAttribute="top" secondItem="hlt-kb-7ri" secondAttribute="top" id="xTz-NK-VTh"/>
             </constraints>
         </view>
     </objects>
